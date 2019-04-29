@@ -145,7 +145,7 @@ $(document).ready(function(){
             for(var i = 0; i < items.length; i++){
                 if(items[i].foodType == "Dessert"){   
                     output2 += "<tr>";
-                    if(items[i].dairyFree || items[i].glutenFree){
+                    if(items[i].dairyFree && items[i].glutenFree){
                         output2 += "<td>" + items[i].name + "</td>";
                         output2 += "<td>" + items[i].calories + "</td>";
                         if (items[i].dairyFree){
