@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Test Supplement</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="css/default.css" rel="stylesheet" />
+</head>
+<body>
+	<ul class="nav nav-pills nav-tabs nav-justified" id="myTab" role="tablist">
+	  <li class="nav-item">
+	    <a class="nav-link active" id="add-tab" data-toggle="tab" href="#add" role="tab" aria-controls="add" aria-selected="true">Add Items</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link" id="list-tab" data-toggle="tab" href="#list" role="tab" aria-controls="list" aria-selected="false">List Items</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link" id="summary-tab" data-toggle="tab" href="#summary" role="tab" aria-controls="summary" aria-selected="false">Summary</a>
+	  </li>
+	</ul>
+	<br />
+	<div class="tab-content" id="myTabContent">
+	  <div class="tab-pane fade show active jumbotron container" id="add" role="tabpanel" aria-labelledby="add-tab">
+	  	<h3>Add Item - 
+	  		<label for="entree">Entree</label>
+		  	<input type="radio" class="formRadio" name="radiobtn" id="entree" value="entree" checked>
+		  	OR
+		  	<input type="radio" class="formRadio" name="radiobtn" id="dessert" value="dessert">
+		  	<label for="dessert">Dessert</label>
+	  	</h3>
+	  		<form id="myForm">
+	  			<div class="form-group row">
+	  			<label for="name" class="col-sm-2 col-form-label">Name : </label>
+		  			<div class="col-sm-10">
+		  				<input type="text" name="name" class="form-control" placeholder="Enter Food Name" id="name" required>
+		  			</div>
+	  			</div>
+	  			<div class="form-group row">
+	  			<label for="calories" class="col-sm-2 col-form-label">Calories : </label>
+		  			<div class="col-sm-10">
+		  				<input type="number" name="calories" class="form-control" placeholder="Enter Calories Amount" id="calories" min="0" required>
+		  			</div>
+	  			</div>
+	  			<div class="form-group row" id="entreeMeat">
+	  			<label for="calories" class="col-sm-2 col-form-label">Protein : </label>
+		  			<div class="col-sm-10">
+		  				<input type="text" name="protein" class="form-control" placeholder="Enter Protein" id="protein">
+		  			</div>
+	  			</div>
+	  			<div class="form-group row" id="dessertFree">
+	  			<label class="col-sm-2 col-form-label">Dessert is : </label>
+		  			<div class="col-sm-10">
+		  				<label for="dairyFree">Dairy Free</label>
+		  				<input type="checkbox" name="dairyFree" id="dairyFree">
+		  				<label for="glutenFree">Gluten Free</label>
+		  				<input type="checkbox" name="glutenFree" id="glutenFree">
+		  			</div>
+	  			</div>
+	  			<button type="submit" class="btn btn-success float-right">Add Item</button>
+	  		</form>
+	  </div>
+	  <div class="tab-pane fade jumbotron container" id="list" role="tabpanel" aria-labelledby="list-tab">
+	  	<h3>List of Entrees and Desserts</h3>
+	  		<div>
+	  			<h4>Entrees</h4>
+	  				<span id="listEntrees"></span>
+	  			<h4>Desserts</h4>
+	  			<div id="dessertChoice">
+		  			<div class="col-sm-10">
+		  				Display 'Only' Desserts - 
+		  				<label for="dairy">Dairy Free</label>
+		  				<input type="checkbox" name="dairy" id="dairy" class="onlyDessert">
+		  				<label for="gluten">Gluten Free</label>
+		  				<input type="checkbox" name="gluten" id="gluten" class="onlyDessert">
+		  			</div>
+	  			</div>
+	  				<span id="listDesserts"></span>
+	  		</div>
+	  </div>
+	  <div class="tab-pane fade jumbotron container" id="summary" role="tabpanel" aria-labelledby="summary-tab">
+	  		<h3>Summary</h3>
+	  		<span id="summaryOutput"></span>
+	  </div>
+	</div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
